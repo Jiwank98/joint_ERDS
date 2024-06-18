@@ -6,6 +6,9 @@ Early Exiting-Aware Joint Resource Allocation and DNN  Splitting for Multi-Senso
 ![image](https://github.com/Jiwank98/joint_ERDS/assets/67055711/e26063ea-4587-44d2-9f2e-3d32ea4fa9f2)
 ![image](https://github.com/Jiwank98/joint_ERDS/assets/67055711/0ff68f95-877e-48b7-bc95-871b63f7792c)
 
+
+
+
 Simulation Results
 
 Simulation 1
@@ -13,11 +16,9 @@ Simulation 1
 ![image](https://github.com/Jiwank98/joint_ERDS/assets/67055711/4f1e3706-0fd5-488b-89b2-fb985e512586)
 ![image](https://github.com/Jiwank98/joint_ERDS/assets/67055711/1790615c-0c4a-47c3-a0ea-b75e4e0f897a)
 
-Simulation 2
+
+
+
 ![image](https://github.com/Jiwank98/joint_ERDS/assets/67055711/f5038e40-894b-45c3-a337-17e73ef1d27f)
-
-Simulation 3
 ![image](https://github.com/Jiwank98/joint_ERDS/assets/67055711/bcf11fdc-9f7b-42c2-b05a-bec391e80255)
-
-Simulation 4
 ![image](https://github.com/Jiwank98/joint_ERDS/assets/67055711/bbaf987e-8eb1-420b-a760-67b4b2b22474)
