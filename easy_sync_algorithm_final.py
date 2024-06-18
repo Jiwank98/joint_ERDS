@@ -22,7 +22,7 @@ import torch.optim as optim
 from torch.autograd import Variable
 
 import datasets
-import sync_exit_edge_cloud as net
+import sync_exit_edge_cloud2 as net
 import torch.cuda.amp as amp
 from itertools import product
 
@@ -445,20 +445,20 @@ def test_model(model, model_path, lr, epochs,point,model_probability,model_time,
 def load_model_data(i):
 
     if i==0:#CIFAR10
-        with open("sync_test_exit_place_CIFAR10_2.pkl", "rb") as x:
+        with open("files/sync_test_exit_place_CIFAR10_2.pkl", "rb") as x:
             #sync_test_exit_place_CIFAR10_2.pkl
             #sync_test_exit_place_CIFAR10_dense
             test_exit_place = pickle.load(x)
 
-        with open("sync_test_exit_time_CIFAR10_2.pkl", "rb") as v:
+        with open("files/sync_test_exit_time_CIFAR10_2.pkl", "rb") as v:
             #sync_test_exit_time_CIFAR10_2.pkl
             #sync_test_exit_time_CIFAR10_dense
             test_exit_time= pickle.load(v)
 
-        with open("sync_dataset.pkl", "rb") as a:
+        with open("files/sync_dataset.pkl", "rb") as a:
             dataset= pickle.load(a)
 
-        with open("sync_target.pkl", "rb") as b:
+        with open("files/sync_target.pkl", "rb") as b:
             target= pickle.load(b)
 
         #exit = [0.8,0.05,0.03,0.02,0.1]
@@ -480,7 +480,7 @@ def load_model_data(i):
 
         #exit_place_dense
         #exit_place_final_2
-        with open('exit_place_final_2.pkl', 'rb') as c:
+        with open('files/exit_place_final_2.pkl', 'rb') as c:
             exit_place = pickle.load(c)
 
 

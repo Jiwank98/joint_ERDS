@@ -466,21 +466,21 @@ def test_model(model, model_path, lr, epochs,device,point,model_probability,mode
 def load_model_data(i):
 
     if i==0:#CIFAR10
-        with open("sync_test_exit_place_CIFAR10_2.pkl", "rb") as x:
+        with open("files/sync_test_exit_place_CIFAR10_2.pkl", "rb") as x:
             test_exit_place = pickle.load(x)
         #sync_test_exit_place_CIFAR10_dense
         #sync_test_exit_place_CIFAR10_2
 
 
-        with open("sync_test_exit_time_CIFAR10_2.pkl", "rb") as v:
+        with open("files/sync_test_exit_time_CIFAR10_2.pkl", "rb") as v:
             #sync_test_exit_time_CIFAR10_2
             #sync_test_exit_time_CIFAR10_dense
             test_exit_time= pickle.load(v)
 
-        with open("sync_dataset.pkl", "rb") as a:
+        with open("files/sync_dataset.pkl", "rb") as a:
             dataset= pickle.load(a)
 
-        with open("sync_target.pkl", "rb") as b:
+        with open("files/sync_target.pkl", "rb") as b:
             target= pickle.load(b)
 
         exit=[0,0,0,0,0]
