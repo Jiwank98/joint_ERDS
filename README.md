@@ -17,8 +17,6 @@ which shows that our proposed framework is applicable in practical multi-sensor 
 
 
 
-# Simulation Results
-
 # Simulation 1 (Total Execution Time for Multi-sensor DT)
 ![image](https://github.com/Jiwank98/joint_ERDS/assets/67055711/31a4eeb4-cb60-483a-a194-51100c040bf4)
 ![image](https://github.com/Jiwank98/joint_ERDS/assets/67055711/4f1e3706-0fd5-488b-89b2-fb985e512586)
