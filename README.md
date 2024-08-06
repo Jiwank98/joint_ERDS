@@ -1,40 +1,45 @@
 # Early Exiting-Aware Joint Resource Allocation and DNN  Splitting for Multi-Sensor Digital Twin in Edge-Cloud  Collaborative System (2024)
+Python implementation of the early exiting-aware joint resource allocation and DNN splitting for multi-sensor digital twin in edge-cloud collaborative system.
 
-💡 In this paper, we address an edge computing resource allocation and deep neural network (DNN) splitting problem in an edge-cloud collaborative system to minimize the
-task execution time of a multi-sensor digital twin (DT), where the constituent tasks of the multi-sensor DT are employed by DNN models with both split computing and early exit structures. 
-To this end, we develop an early exiting-aware joint edge computing resource allocation and DNN splitting (ERDS) framework that optimally solves the problem. 
+## Requirements
+Due to property issues, we cannot provide the exact values related to the trained model, early exit probabilities, and the execution time. 
+Before running the simulation, please follow the instructions and achieve trained model with essential files.
 
-In the framework, the problem is reformulated into a nested optimization problem consisting of an outer edge computing resource allocation problem and an inner DNN splitting problem which considers early exiting.
-Based on the nested structure, the framework can efficiently solve the problem without having to consider the edge computing resource allocation and DNN splitting jointly.
-As components of the framework, we develop an edge computing resource allocation algorithm that exploits the mathematical structure of the outer problem; 
-we also develop an optimal DNN splitting algorithm and a heuristic algorithm that identifies suboptimal solutions but has lower computational complexity. 
+'''
 
-Through the simulation, we demonstrate that our proposed framework effectively outperforms other state-of-the-art baselines in terms of the task execution time of the multi-sensor DT in different environments, 
-which shows that our proposed framework is applicable in practical multi-sensor DTs.
+1. First, we need to train the DNN model with early exit structures. Please check the 'model.py' file. 
+   'class DDNN' is for the ResNet based model explained in the paper. / 'class DDNN_DenseNet' is for the DenseNet based model explained in the supplementary paper.
 
-![image](https://github.com/Jiwank98/joint_ERDS/assets/67055711/842a7eee-891d-41fa-9550-ef606fd28c08)
+2.Then run 'train_model_for_ERDS.py' to train and evaluate the selected model with the dataset (CIFAR-10 / CIFAR-100 / IMAGENET)
+  While training the model, we must store the following information that will be used by the algorithm.
+  1) The trained model should be saved. ex) 'models/sync_test_model_Cifar10:dense.pth'
+  2) The number of times each image data early exited at a particular exit point should be saved. ex) 'files/sync_test_exit_place_CIFAR10.pkl'
+  3) The execution time of the model for each image data should be measured and saved. ex) 'files/sync_test_exit_time_CIFAR10.pkl'
 
-
-
-
-# 💡 Simulation 1 (Total Execution Time for Multi-sensor DT)
-![image](https://github.com/Jiwank98/joint_ERDS/assets/67055711/31a4eeb4-cb60-483a-a194-51100c040bf4)
-![image](https://github.com/Jiwank98/joint_ERDS/assets/67055711/4f1e3706-0fd5-488b-89b2-fb985e512586)
-![image](https://github.com/Jiwank98/joint_ERDS/assets/67055711/1790615c-0c4a-47c3-a0ea-b75e4e0f897a)
+'''
 
 
+# Usage
+```
+run.py --scenario SCENARIO --scenario2 SCENARIO2 --digital_twin DIGITALTWIN
+```
+Required argument:
+*  --scenario: types of scenario {original: orignal scenario, dynamic_tr: dynamic transmission time scenarios, dynamic_cloud: dynamic cloud execution time scenarios, dynamic_edge: dynamic edge execution time scenarios}
+*  --scenario2: types of specific scenario of dynamic_tr/dynamic_cloud/dynamic_edge  {0: 0.5 / 1.5 / 1.5, 1: 1 / 1 / 1, 2: 1.5 / 0.666 / 0.666, 3: 2 / 0.5 / 0.5, 4: 3 / 0.333 / 0.5}
+*  --digital_twin: the numbers of digital twins that need to be synchronized {1, 2, 3}
 
-# 💡 Simulation 2 (Impact of Transmission Time)
-![image](https://github.com/Jiwank98/joint_ERDS/assets/67055711/f5038e40-894b-45c3-a337-17e73ef1d27f)
+Example 
+```
+python run.py --scenario original --scenario2 0 --digital_twin 3
+```
+Parameters of scenarios can be adjusted in: 
+* run.py:get_parser()
 
 
 
-# 💡 Simulation 3 (Impact of Cloud computing capabilities)
-![image](https://github.com/Jiwank98/joint_ERDS/assets/67055711/bcf11fdc-9f7b-42c2-b05a-bec391e80255)
-
-
-
-# 💡 Simulation 4 (Impact of Edge computing capabilities)
-![image](https://github.com/Jiwank98/joint_ERDS/assets/67055711/bbaf987e-8eb1-420b-a760-67b4b2b22474)
+# Results
+- This implementation produces the data used in Figures 5 ~ 7, and Table 4 ~ 5 in the paper.
+- This implementation also produces the data used in Table 1 ~ 2 in Supplementary Material of the paper, which is considering the DenseNet model.
+- Plotting data is not implemented here. We plotted the figures by using MATLAB. The results are saved in a form of '.mat' files
 
 
