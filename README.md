@@ -5,8 +5,7 @@ Python implementation of the early exiting-aware joint resource allocation and D
 Due to property issues, we cannot provide the exact values related to the trained model, early exit probabilities, and the execution time. 
 Before running the simulation, please follow the instructions and achieve trained model with essential files.
 
-'''
-
+```
 1. First, we need to train the DNN model with early exit structures. Please check the 'model.py' file. 
    'class DDNN' is for the ResNet based model explained in the paper. / 'class DDNN_DenseNet' is for the DenseNet based model explained in the supplementary paper.
 
@@ -15,8 +14,7 @@ Before running the simulation, please follow the instructions and achieve traine
   1) The trained model should be saved. ex) 'models/sync_test_model_Cifar10:dense.pth'
   2) The number of times each image data early exited at a particular exit point should be saved. ex) 'files/sync_test_exit_place_CIFAR10.pkl'
   3) The execution time of the model for each image data should be measured and saved. ex) 'files/sync_test_exit_time_CIFAR10.pkl'
-
-'''
+```
 
 
 # Usage
