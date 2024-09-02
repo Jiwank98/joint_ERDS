@@ -1,5 +1,6 @@
 # Early Exiting-Aware Joint Resource Allocation and DNN  Splitting for Multi-Sensor Digital Twin in Edge-Cloud  Collaborative System (2024)
 Python implementation of the early exiting-aware joint resource allocation and DNN splitting for multi-sensor digital twin in edge-cloud collaborative system.
+Use "joint_ERDS_coder_for_paper" folder.
 
 ## Requirements
 Due to property issues, we cannot provide the exact values related to the trained model, early exit probabilities, and the execution time. 
